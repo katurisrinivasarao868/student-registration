@@ -1,0 +1,700 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f7fbff;
+
+    color: #333;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+
+    height: 80px;
+
+    background: #063b91;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 8%;
+
+    color: white;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+.logo:first-letter {
+
+    font-size: 28px;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 22px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+
+nav a:hover,
+nav a.active {
+
+    background: #1593eb;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+
+    text-align: center;
+
+    padding: 40px 0 30px;
+}
+
+
+.heading h1 {
+
+    color: #12345c;
+
+    font-size: 38px;
+
+    margin-bottom: 8px;
+}
+
+
+.heading p {
+
+    color: #7d8790;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 28px;
+}
+
+
+/* =========================
+   REGISTRATION
+========================= */
+
+.registration-box {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+.registration-box h2 {
+
+    font-size: 18px;
+
+    color: #203b5c;
+
+    margin-bottom: 22px;
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 16px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #44515c;
+
+    margin-bottom: 7px;
+}
+
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    height: 42px;
+
+    border: 1px solid #dfe5ea;
+
+    border-radius: 5px;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    background: white;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #168de7;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 141, 231, .1);
+}
+
+
+/* Gender */
+
+.gender {
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.gender label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-weight: normal;
+}
+
+
+.gender input {
+
+    width: 16px;
+
+    height: 16px;
+
+    accent-color: #168de7;
+}
+
+
+/* Buttons */
+
+.buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+
+button {
+
+    cursor: pointer;
+
+    border: none;
+
+    border-radius: 5px;
+
+    height: 43px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+.add-button {
+
+    flex: 1;
+
+    color: white;
+
+    background: #078be8;
+}
+
+
+.clear-button {
+
+    flex: 1;
+
+    color: #555;
+
+    background: #f0f2f4;
+}
+
+
+button:hover {
+
+    opacity: .9;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.statistics {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+
+.stat-card {
+
+    min-height: 145px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+}
+
+
+.stat-card.blue {
+
+    background: #e8f6ff;
+}
+
+
+.stat-card.green {
+
+    background: #e9fff1;
+}
+
+
+.stat-card.orange {
+
+    background: #fff7e7;
+}
+
+
+.stat-card.purple {
+
+    background: #f9edff;
+}
+
+
+.stat-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 26px;
+}
+
+
+.blue .stat-icon {
+
+    background: #d6efff;
+}
+
+
+.green .stat-icon {
+
+    background: #d5f9e4;
+}
+
+
+.orange .stat-icon {
+
+    background: #ffeac5;
+}
+
+
+.purple .stat-icon {
+
+    background: #efd8fa;
+}
+
+
+.stat-card h3 {
+
+    font-size: 31px;
+
+    color: #172f4c;
+
+    margin-bottom: 6px;
+}
+
+
+.stat-card p {
+
+    font-size: 13px;
+
+    color: #68737d;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section {
+
+    margin: 30px 0 22px;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto auto;
+
+    gap: 10px;
+}
+
+
+.search-box {
+
+    height: 48px;
+
+    background: white;
+
+    border: 1px solid #e0e6eb;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 15px;
+
+    color: #1592ed;
+}
+
+
+.search-box input {
+
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 13px;
+}
+
+
+.search-button {
+
+    height: 48px;
+
+    padding: 0 30px;
+
+    background: #078be8;
+
+    color: white;
+}
+
+
+.show-button {
+
+    height: 48px;
+
+    padding: 0 30px;
+
+    background: #6d747a;
+
+    color: white;
+}
+
+
+/* =========================
+   STUDENT RECORDS
+========================= */
+
+.student-records {
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, .06);
+
+    overflow: hidden;
+
+    margin-bottom: 45px;
+}
+
+
+.records-header {
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e8edf1;
+}
+
+
+.records-header h2 {
+
+    font-size: 18px;
+
+    color: #183556;
+}
+
+
+.records-header span {
+
+    color: #7b8790;
+
+    font-size: 13px;
+}
+
+
+/* Table */
+
+.table-container {
+
+    overflow-x: auto;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+
+th {
+
+    background: #f7f9fa;
+
+    color: #52606b;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    padding: 15px;
+}
+
+
+td {
+
+    padding: 14px 15px;
+
+    border-top: 1px solid #edf0f2;
+
+    color: #4d5963;
+
+    font-size: 13px;
+}
+
+
+.delete-button {
+
+    background: #fff0f0;
+
+    color: #dc4444;
+
+    padding: 7px 12px;
+
+    height: auto;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #89939c;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 900px) {
+
+    .main-content {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media(max-width: 650px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .statistics {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .search-section {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .buttons {
+
+        flex-direction: column;
+    }
+
+
+    .heading h1 {
+
+        font-size: 28px;
+    }
+
+}

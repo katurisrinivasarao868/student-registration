@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            🎓
+            <span>Student Portal</span>
+        </div>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#students">Students</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Heading -->
+        <section class="heading">
+            <h1>Student Registration System</h1>
+            <p>Add, view, search and manage student records easily</p>
+        </section>
+
+
+        <!-- Main Content -->
+        <section class="main-content">
+
+            <!-- Registration Form -->
+            <div class="registration-box">
+
+                <h2>👥 Register New Student</h2>
+
+                <form id="studentForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter student name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Course</label>
+
+                            <select id="course">
+
+                                <option value="B.Tech">
+                                    B.Tech
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="MBA">
+                                    MBA
+                                </option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label>Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter email address"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Year</label>
+
+                            <select id="year">
+
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label>Phone Number</label>
+
+                            <input
+                                type="text"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Gender</label>
+
+                            <div class="gender">
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="Male"
+                                        checked
+                                    >
+                                    Male
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="Female"
+                                    >
+                                    Female
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="buttons">
+
+                        <button
+                            type="submit"
+                            class="add-button"
+                        >
+                            ＋ Add Student
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="clearButton"
+                            class="clear-button"
+                        >
+                            ↻ Clear Form
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- Statistics -->
+            <div class="statistics">
+
+                <div class="stat-card blue">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+                        <h3 id="totalStudents">12</h3>
+                        <p>Total Students</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card green">
+
+                    <div class="stat-icon">
+                        🎓
+                    </div>
+
+                    <div>
+                        <h3 id="btechStudents">5</h3>
+                        <p>B.Tech Students</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card orange">
+
+                    <div class="stat-icon">
+                        📊
+                    </div>
+
+                    <div>
+                        <h3 id="bcaStudents">4</h3>
+                        <p>BCA Students</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card purple">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+                        <h3 id="mbaStudents">3</h3>
+                        <p>MBA Students</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name, course or email..."
+                >
+
+            </div>
+
+
+            <button
+                class="search-button"
+                id="searchButton"
+            >
+                Search
+            </button>
+
+
+            <button
+                class="show-button"
+                id="showAllButton"
+            >
+                Show All
+            </button>
+
+        </section>
+
+
+        <!-- Student Table -->
+        <section class="student-records" id="students">
+
+            <div class="records-header">
+
+                <h2>Student Records</h2>
+
+                <span id="recordCount">
+                    12 records
+                </span>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer id="about">
+
+        <p>
+            © 2026 Student Portal | Student Registration System
+        </p>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
